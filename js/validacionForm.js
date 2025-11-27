@@ -11,33 +11,43 @@
 
 //Caso contrario , mostramos un mensaje de error.
 
+/*
+let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let isValid = mail.match(regex);
+if (isValid) {
+    console.log("Valid email address");
+} else {
+    console.log("Invalid email address");
+}
+*/
+
 
 function validarFormulario() {
   console.log("Función ValidarFormulario Ejecutada");
-  const email_valido = "admin@admin.com";
-  const paaswd_valido = "admin123";
+  const emailAdminValido = "admin@correo.com";
+  const passwdAdminValido = "admin1234";
 
-  const AdminEmail = document.getElementById('id_mail').value;
-  const AdminPasswd = document.getElementById('id_passwd').value;
+  const adminEmail = document.getElementById('id_mail').value;
+  const adminPasswd = document.getElementById('id_passwd').value;
 
   let esValido = true;
 
   //Condicionales para validar
-  if(usrEmail.length < 1) {
+  if(adminEmail.length < 1) {
     mostrarError('empty_email', 'El campo email no puede estar vacío');
     esValido = false;
   } else {
     ocultarError('empty_email');
   }
 
-  if(usrPsw.length < 1) {
+  if(adminPasswd.length < 1) {
     mostrarError('empty_psw', 'El campo password no puede estar vacío');
     esValido = false;
   } else {
     ocultarError('empty_psw');
   }
 
-  if(emailValido !== usrEmail || pswValido !== usrPsw) {
+  if(emailAdminValido !== adminEmail || passwdAdminValido !== adminPasswd) {
     mostrarError('login_error', 'Las credenciales no son válidas');
     esValido = false;
   } else {
