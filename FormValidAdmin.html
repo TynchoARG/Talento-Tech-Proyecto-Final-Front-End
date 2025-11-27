@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Formulario de validación</title>
+</head>
+<body>
+    <header>
+            
+    </header>
+
+    <main>
+        <section id="titulo_form">
+            <h2>Panel Administrador</h2>
+        </section>
+        <section id="errores_contenedor">
+            <div id="email_vacio_error" class="error"></div> <!--Campo email vacío-->
+            <div id="passwd_vacio_error" class="error"></div> <!--Campo contraseña vacío-->
+            <div id="login_error" class="error"></div> <!--Error en el email y la contraseña-->
+            <div id="email_format_error" class="error"></div> <!--Error en el formato del e-mail-->
+        </section>
+
+            <!--Formulario de ingreso de datos del Admin-->
+        <section id="form_contenedor">
+            <form id="form_login" novalidate>
+                <input id="id_email" type="email" placeholder="Ingrese su email"> <br>
+                <input id="id_passwd" type="password" placeholder="Ingrese su contraseña"> <br>
+                <button type="button" id="btn_login">Ingresar</button>
+                <button type="reset" >Limpiar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/validacionForm.js"></script>
+</body>
+</html>
