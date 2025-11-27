@@ -12,13 +12,13 @@
 //Caso contrario , mostramos un mensaje de error.
 
 
-function validarForm() {
-  console.log("ValidarForm");
-  const emailValido = "admin@admin.com";
-  const pswValido = "admin123";
+function validarFormulario() {
+  console.log("Función ValidarFormulario Ejecutada");
+  const email_valido = "admin@admin.com";
+  const paaswd_valido = "admin123";
 
-  const usrEmail = document.getElementById('id_mail').value;
-  const usrPsw = document.getElementById('id_psw').value;
+  const AdminEmail = document.getElementById('id_mail').value;
+  const AdminPasswd = document.getElementById('id_passwd').value;
 
   let esValido = true;
 
