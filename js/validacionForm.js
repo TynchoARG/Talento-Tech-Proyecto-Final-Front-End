@@ -1,71 +1,93 @@
-// FUNCION PARA VALIDAR EL FORMULARIO DE INGRESO
-function validarFormulario() {
-  const emailAdminValido = "admin@correo.com"; // USER Y PASSWORD DEL ADMINISTRADOR
-  const passwdAdminValido = "admin1234";
+// -------------------------------------------------
+//  VALIDACIÓN DEL FORMULARIO DE LOGIN
+// -------------------------------------------------
 
-  const adminEmail = document.getElementById('id_mail').value.trim();
+function validarFormulario() {
+  const ADMIN_EMAIL = "admin@correo.com";      // CREDENCIALES DEL ADMIN
+  const ADMIN_PASS  = "admin1234";
+
+  const adminEmail  = document.getElementById('id_mail').value.trim();
   const adminPasswd = document.getElementById('id_passwd').value.trim();
 
+  let esValido = true;
+  
   ocultarTodosLosErrores();
 
-  // VERIFICAR EMAIL VACÍO
+  // EMAIL VACÍO
   if (adminEmail === "") {
-    mostrarError("empty_email", "El campo email no puede estar vacío");
-    return false;
+    mostrarError("email_vacio_error", "El campo email no puede estar vacío");
+    esValido = false;
+  } else {
+    ocultarError('email_vacio_error');
   }
 
-  // VERIFICAR FORMATO EMAIL
+
+  // FORMATO DE EMAIL
   if (!validarFormatoEmail(adminEmail)) {
-    mostrarError("format_email", "El formato del email es inválido");
-    return false;
+    mostrarError("email_format_error", "El formato del email es inválido");
+    esValido = false;
+  } else {
+    ocultarError('email_format_error');
   }
 
-  // VERIFICAR PASSWORD VACÍA
+  // PASSWORD VACÍA
   if (adminPasswd === "") {
-    mostrarError("empty_psw", "El campo password no puede estar vacío");
-    return false;
+    mostrarError("passwd_vacio_error", "El campo contraseña no puede estar vacío");
+    esValido = false;
+  } else {
+    ocultarError('passwd_vacio_error');
   }
 
-  // VERIFICAR LAS CREDENCIALES
-  if (adminEmail !== emailAdminValido || adminPasswd !== passwdAdminValido) {
+  // CREDENCIALES INCORRECTAS
+  if (adminEmail !== ADMIN_EMAIL || adminPasswd !== ADMIN_PASS) {
     mostrarError("login_error", "Las credenciales no son válidas");
-    return false;
+    esValido = false;
+  } else {
+    ocultarError('login_error');
   }
 
-  // SI ESTA TODO OK
-  return true;
+  // SI TODO ESTÁ OK
+  return esValido;
 }
 
 
-// FUNCIONES
-function mostrarError(fieldId, message) {
-  const el = document.getElementById(fieldId + "_error");
+// -------------------------------------------------
+//  MANEJO DE ERRORES
+// -------------------------------------------------
+
+// MUESTRA UN MENSAJE DE ERROR EN UN ELEMENTO
+function mostrarError(id, message) {
+  const el = document.getElementById(id);
   el.textContent = "❌ " + message;
   el.style.display = "block";
 }
 
-function ocultarError(fieldId) {
-  document.getElementById(fieldId + "_error").style.display = "none";
+
+function ocultarError(Id) {
+  const errorElement = document.getElementById(Id);
+  errorElement.style.display = 'none';
 }
 
-function ocultarTodosLosErrores() {
-  const errores = document.querySelectorAll("[id$='_error']");
-  errores.forEach(e => e.style.display = "none");
-}
+// -------------------------------------------------
+//  VALIDACIÓN DE FORMATO DE EMAIL POR REGEX
+// -------------------------------------------------
 
-// SE USA REGULAR EXPRESSION PARA VERIFICAR EL FORMATO DE EMAIL
 function validarFormatoEmail(email) {
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
   return regex.test(email);
 }
 
 
-// LISTENER al hacer click en el boton ejecuta la funcion de validar formulario
+// -------------------------------------------------
+//  EVENTO DEL BOTÓN DE INGRESO
+// -------------------------------------------------
+
 const btnIngresar = document.getElementById('btn_login');
 btnIngresar.addEventListener('click', function(event) {
   event.preventDefault();
-  console.log("Entramos en el listener");
-  if(validarFormulario()) {
+  console.log("Ejecutando validación...");
+
+  if (validarFormulario()) {
     window.location.href = "pages/PanelAdmin.html";
   }
 });
