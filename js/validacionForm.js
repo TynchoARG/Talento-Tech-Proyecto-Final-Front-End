@@ -6,13 +6,11 @@ function validarFormulario() {
   const ADMIN_EMAIL = "admin@correo.com";      // CREDENCIALES DEL ADMIN
   const ADMIN_PASS  = "admin1234";
 
-  const adminEmail  = document.getElementById('id_mail').value.trim();
+  const adminEmail  = document.getElementById('id_email').value.trim();
   const adminPasswd = document.getElementById('id_passwd').value.trim();
 
   let esValido = true;
   
-  ocultarTodosLosErrores();
-
   // EMAIL VACÍO
   if (adminEmail === "") {
     mostrarError("email_vacio_error", "El campo email no puede estar vacío");
