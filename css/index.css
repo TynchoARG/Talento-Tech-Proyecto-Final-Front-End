@@ -7,7 +7,7 @@
 }
 
 
-/*Header*/
+/* ------ Header ------ */
 
 .header {
     display: flex;
@@ -26,37 +26,7 @@
 }
 
 
-/*Barra de navegación
-
-.navegacion {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 5px;
-    font-family: Inter, Verdana, Tahoma, sans-serif;
-    font-weight: bold;
-    list-style: none;
-    flex-wrap: wrap;
-    height: 130px;
-}
-
-
-ul{
-    list-style-type: none;
-}
-
-.link-deco {
-    text-decoration: none;
-    color: rgb(61, 61, 61);
-    font-weight: bold;
-    padding: 10px;
-}
-*/
-
-
-
-
-/*Barra de navegación*/
+/* ------ Header - Barra de navegación ------ */
 .navegacion {
     display: flex;
     justify-content: space-around;
@@ -83,33 +53,20 @@ ul {
     border-bottom: 3px solid transparent;
 }
 
-/* Efecto hover simple */
+/* ------ Efecto hover barra navegación header ------ */
 .link-deco:hover {
     color: #E91E63;
     border-bottom: 3px solid #F8BBD0;
 }
 
-/* Link activo (página actual) 
-.link-deco.active {
-    color: #E91E63;
-    border-bottom: 3px solid #F8BBD0;
-}
-*/
 
-
-
-
-
-
-
-/*Encabezado*/
+/* ------ Encabezado ------ */
 
 .encabezado {
-    /*background-color: rgb(125, 189, 181);*/
     background: linear-gradient(135deg, #c8e6c9 0%, #f8bbd0 50%, #e1bee7 100%);
     font-family: Inter, Verdana, Tahoma, sans-serif;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: 50px 15px;
+    padding: 80px 15px;
 }
 
 .txt-encabezado {
@@ -124,15 +81,15 @@ ul {
 }
 
 
-/*Sección productos*/
+/* ------ Sección productos ------ */
 
-.contenedor_productos {
+.contenedor-productos {
     color: rgb(61, 61, 61);
-     background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
+    background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: Inter, Verdana, Tahoma, sans-serif;
-    padding: 40px;
+    padding: 10px;
 }
 
 .tit-seccion-prod{
@@ -144,7 +101,7 @@ ul {
     font-family: Inter, Verdana, Tahoma, sans-serif;
 }
 
-.contenedor_card {
+.contenedor-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -152,34 +109,19 @@ ul {
     width: 100%;
 }
 
-/*.card-prod {
-    padding: 15px;
-    font-family: Inter, Verdana, Tahoma, sans-serif;
-    border: 3px solid rgb(129, 129, 152);
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-    box-shadow: #6c6867;
-}*/
 
 .card-prod {
     background: white;
     border-radius: 15px;
-    border: 3px solid #F8BBD0; /* Rosa pastel */
+    border: 3px solid #F8BBD0;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .card-prod:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-color: #e2658f; /* Rosa más intenso */
+    border-color: #e2658f;
 }
-
-/*.tit-card-prod{
-    text-align: center;
-    font-weight: bold;
-    padding: 5px;
-}*/
 
 .tit-card-prod {
     color: #333333;
@@ -189,11 +131,6 @@ ul {
     font-weight: 600;
 }
 
-/*.img-prod {
-    width: 250px;
-    border-radius: 10px;
-    justify-content: center;
-}*/
 
 .img-prod {
     width: 100%;
@@ -203,11 +140,6 @@ ul {
     margin-bottom: 15px;
 }
 
-/*.precio-prod {
-    padding: 5px;
-    color: #5e5a58;
-    text-align: center;
-}*/
 
 .precio-prod {
     color: #E91E63;
@@ -217,18 +149,6 @@ ul {
     margin-bottom: 15px;
 }
 
-/*.btn-prod {
-    padding: 10px;
-    margin: 5px;
-    justify-content: center;
-    background: #6c6867;
-    color: whitesmoke;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    width: 100%;
-    
-}*/
 
 .btn-prod {
     background: linear-gradient(135deg, #E91E63 0%, #F06292 100%);
@@ -248,80 +168,300 @@ ul {
     box-shadow: 0 6px 16px rgba(233, 30, 99, 0.4);
 }
 
-/*Seccion contacto*/
 
-.contenedor_contacto {
-    background-color: #d9b09b;
+/* ------ Seccion contacto ------ */
+
+.contenedor-contacto {
+        background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
 }
 
-.tit_contacto {
-    padding: 15px 0 5px;
+.tit-contacto {
+    padding: 10px 0 5px 0;
     text-align: center;
+    color: rgb(61, 61, 61);
+    font-size: 1.2rem;
     font-family: Inter, Verdana, Tahoma, sans-serif;
 }
 
-.form_rrss_juntos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.form_contacto {
-    background-color: #dc9c7b;
-    font-family: Inter, Verdana, Tahoma, sans-serif;
+.contenedor-form-contacto {
+    text-align: center;
+    color: rgb(61, 61, 61);
     padding: 15px;
 }
 
-.contenedor_rrss {
-    background-color: #a07863;
-    font-family: Inter, Verdana, Tahoma, sans-serif;
-    padding: 15px;
-}
-
-.iconos_rrss {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.iconos_rrss a {
-    padding: 2px 10px;
-}
-
-.ubicacion {
-    background-color: #aa5f39;
+.tit-form-contacto {
     font-family: Inter, Verdana, Tahoma, sans-serif;
     text-align: center;
-}
-
-.ubicacion h3 {
     padding: 5px;
 }
 
-/*Footer*/
-
-.container-footer {
-    padding: 30px;
-    background-color: #333333;
-}
-
-.text-footer {
-    color: whitesmoke;
+.formulario {
+    background-color: #e0c8e4;
+    font-size: 16px;
+    padding: 20px;
     font-family: Inter, Verdana, Tahoma, sans-serif;
+    border: 2px solid rgba(0,0,0,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    gap: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    color: #0e070a;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+    width: 90%;
+}
+
+input[type="text"], input[type="email"] {
+    margin: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #c3809d;
+}
+
+textarea {
+    background-color: #fbeef4
+}
+
+/* ------ Estilo del Placeholder ------ */
+input::placeholder,
+textarea::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: #a88ba3;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ba798e;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+    color: whitesmoke;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button[type="reset"] {
+    background-color: whitesmoke;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+    color: #ba798e;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button[type="submit"]:hover {
+    background-color: #905f6e;
+}
+
+button[type="reset"]:hover {
+    background-color: rgb(217, 211, 211);
+    color: #83666e;
+}
+
+/* ------ Footer ------ */
+
+.contenedor-footer {
+    background: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, Verdana, Tahoma, sans-serif;
+    padding: 10px 5px;
+}
+
+/* --- Parte superior (links, mapa, rrss) --- */
+.secciones-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: visible;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 25px;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 200px; /* ancho mínimo fijo para evitar compresión */
+    justify-content: center;
+    align-items: center;
+}
+
+.links-footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start; /* alinear a la izquierda dentro de su caja */
+}
+
+.links-footer li {
+    margin: 6px 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: lighter;
+}
+
+.footer-link:hover {
+    color: #F8BBD0;
+}
+
+/* ------ mapa central ------*/
+.mapa-footer {
+    flex: 1 1 150px; /* permite crecer y reducir sin superponer */
+}
+
+.mapa-footer iframe {
+        width: 100%;
+        height: 220px;
+        border: none;
+}
+
+/* ------ redes ------*/
+.rrss-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.rrss-footer img {
+    width: 40px;
+}
+.rrss-footer img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Parte inferior (título, subtitulo, copyright) --- */
+.contenedor-titulo-footer {
     text-align: center;
+    max-width: 600px;
 }
 
-.title-footer {
-    font-size: large;
-    font-weight: bold;
+.titulo-footer h3 {
+  margin-bottom: 8px;
 }
 
-.subtitle-footer {
-    font-size: medium;
-    font-weight: lighter;
+.subtitulo-footer {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
-.copyright-footer {
-    font-size: small;
-    font-weight: lighter;
+.copyright-footer h5 {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #ccc;
+}
+
+/* ------ Parte responsive ------ */ 
+
+@media (max-width: 800px) {
+
+.formulario {
+    max-width: 400px;
+}
+
+  .secciones-footer {
+    flex-direction: column; /* se apilan todas las secciones */
+    align-items: center;
+  }
+
+    /* --- ajusta los espacios en modo mobile --- */
+    .secciones-footer {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .links-footer {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .links-footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* se mantiene vertical en modo mobile */
+        gap: 6px;
+        padding: 0;
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .links-footer li {
+        margin: 4px 0;
+    }
+
+    .mapa-footer iframe {
+        width: 100%;
+        height: 160px;
+    }
+
+    .rrss-footer {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .rrss-footer img {
+        width: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .formulario {
+        max-width: 90%;
+    }
+
+    .links-footer {
+        flex-direction: row;
+    }
+
+    .links-footer li {
+        margin: 2px 6px;
+        font-size: 0.9rem;
+    }
+    
+    .rrss-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .rrss-footer img {
+        width: 32px;
+    }
+
+    .mapa-footer iframe {
+        height: 140px;
+    }
 }
