@@ -209,7 +209,7 @@ ul {
     gap: 5px;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
     color: #0e070a;
     border: none;
     font-size: 18px;
@@ -218,7 +218,7 @@ input[type="text"], input[type="email"], textarea {
     width: 90%;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="password"] {
     margin: 10px;
     background-color: transparent;
     border-bottom: 2px solid #c3809d;
@@ -232,7 +232,8 @@ textarea {
 input::placeholder,
 textarea::placeholder,
 input[type="text"]::placeholder,
-input[type="email"]::placeholder {
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
     color: #a88ba3;
     font-family: Inter, Verdana, Tahoma, sans-serif;
     font-style: italic;
