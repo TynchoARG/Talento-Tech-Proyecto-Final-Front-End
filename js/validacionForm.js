@@ -81,11 +81,13 @@ function validarFormatoEmail(email) {
 // -------------------------------------------------
 
 const btnIngresar = document.getElementById('btn_login');
+
 btnIngresar.addEventListener('click', function(event) {
   event.preventDefault();
   console.log("Ejecutando validación...");
 
-  if (validarFormulario()) {
-    window.location.href = "pages/PanelAdmin.html";
-  }
-});
+    if (validarFormulario()) {
+      // Al estar en pages/FormValidAdmin.html, la redirección debe ser relativa a la misma carpeta
+      window.location.href = "PanelAdmin.html";
+    }
+  });
