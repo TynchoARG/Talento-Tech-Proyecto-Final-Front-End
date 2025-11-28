@@ -274,6 +274,15 @@ button[type="reset"]:hover {
     color: #83666e;
 }
 
+
+/* ------ Formulario Administardor ------ */
+
+.contenedor-form-admin {
+    background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
+    padding: 20px;
+    margin: 70px;
+}
+
 /* ------ Footer ------ */
 
 .contenedor-footer {
