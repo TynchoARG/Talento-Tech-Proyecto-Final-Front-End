@@ -1,0 +1,105 @@
+/* ==================================== */
+/* 1. Reset y Estilos Generales         */
+/* ==================================== */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f2; 
+    /* El background-color del body servirá como fondo base */
+}
+
+.main-content {
+    /* Esto es crucial: Permite que el fondo de blobs y el texto centrado 
+       ocupen todo el espacio entre el Header y el Footer. */
+    min-height: calc(100vh - 120px); /* Ajusta 120px si tu header/footer son más grandes */
+    position: relative; /* Contiene el posicionamiento absoluto del wrapper */
+    display: flex; /* Necesario para centrar el contenido verticalmente */
+    flex-direction: column;
+}
+
+/* ==================================== */
+/* 2. Estilos del Fondo (Blobs)         */
+/* ==================================== */
+.blob-container {
+    position: absolute; /* Posiciona respecto a .main-content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Los blobs detrás del texto */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.6; /* Un poco menos opaco para un look más suave */
+}
+
+/* Colores y formas basadas en la imagen */
+.blob-1 { /* Verde-Claro */
+    top: 5%; left: 10%;
+    width: 40vw; height: 40vw;
+    background-color: #d4eac8;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+.blob-2 { /* Rosa-Pastel */
+    bottom: 5%; right: 10%;
+    width: 50vw; height: 50vw;
+    background-color: #fadadd;
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+}
+.blob-3 { /* Beige/Amarillo */
+    top: 30%; left: 30%;
+    width: 35vw; height: 35vw;
+    background-color: #fbeec1;
+    border-radius: 50% 50% 30% 70% / 50% 30% 70% 60%;
+}
+.blob-4 { /* Lila */
+    bottom: 40%; right: 35%;
+    width: 30vw; height: 30vw;
+    background-color: #e8dff5;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 30%;
+}
+
+/* ==================================== */
+/* 3. Estilos del Sitio en Construcción */
+/* ==================================== */
+.construction-wrapper {
+    /* Centra el texto en el medio del MAIN */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; /* Asegura que ocupe el espacio vertical disponible */
+    z-index: 2; /* Texto por encima de los blobs */
+}
+
+.content-box {
+    width: 90%;
+    max-width: 800px;
+    padding: 30px 20px;
+    text-align: center;
+    /* Fondo blanco semitransparente como en la imagen */
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px); /* Opcional: efecto de vidrio esmerilado */
+    border-radius: 5px; /* Bordes suaves */
+}
+
+.content-box h1 {
+    margin: 0;
+    font-size: 2.5em; 
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-box p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #555;
+}

@@ -114,6 +114,6 @@ btnIngresar.addEventListener('click', function(event) {
 
     if (validarFormulario()) {
       // Al estar en pages/FormValidAdmin.html, la redirección debe ser relativa a la misma carpeta
-      window.location.href = "PanelAdmin.html";
+      window.location.href = "panelAdmin.html";
     }
   })
