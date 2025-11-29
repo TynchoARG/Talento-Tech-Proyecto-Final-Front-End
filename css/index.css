@@ -283,6 +283,42 @@ button[type="reset"]:hover {
     margin: 70px;
 }
 
+
+/*---- Modal oculto para errores ---*/
+
+.modal-oculto {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.modal-contenido h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+#listaErrores {
+    padding-left: 18px;
+    margin: 12px 0;
+}
+
+#listaErrores li {
+    margin-bottom: 6px;
+}
+
+
 /* ------ Footer ------ */
 
 .contenedor-footer {

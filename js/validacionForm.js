@@ -2,68 +2,60 @@
 //  VALIDACIÓN DEL FORMULARIO DE LOGIN
 // -------------------------------------------------
 
+/*
+    La función validarFormulario crea una LISTA (array) llamada "errores".
+    Cada vez que detecta un problema, agrega un texto a esa lista.
+    Cuando termina, si la lista NO está vacía, se la pasa al modal.
+*/
+
+
 function validarFormulario() {
-  const ADMIN_EMAIL = "admin@correo.com";      // CREDENCIALES DEL ADMIN
+
+  // CREDENCIALES DEL ADMIN
+  const ADMIN_EMAIL = "admin@correo.com";     
   const ADMIN_PASS  = "admin1234";
 
+  // ENTRADAS DEL FORMULARIO
   const adminEmail  = document.getElementById('id_email').value.trim();
   const adminPasswd = document.getElementById('id_passwd').value.trim();
 
-  let esValido = true;
-  
-  // EMAIL VACÍO
+  // LISTA QUE ALMACENA TODOS LOS ERRORES ENCONTRADOS
+  let errores = [];
+
+  // ---------------------------
+  // VALIDACIONES INDIVIDUALES
+  // ---------------------------
+
+  // Email vacío
   if (adminEmail === "") {
-    mostrarError("email_vacio_error", "El campo email no puede estar vacío");
-    esValido = false;
-  } else {
-    ocultarError('email_vacio_error');
+    errores.push("El campo email no puede estar vacío");
   }
 
-
-  // FORMATO DE EMAIL
-  if (!validarFormatoEmail(adminEmail)) {
-    mostrarError("email_format_error", "El formato del email es inválido");
-    esValido = false;
-  } else {
-    ocultarError('email_format_error');
+  // Email con formato incorrecto (solo si no está vacío)
+  if (adminEmail !== "" && !validarFormatoEmail(adminEmail)) {
+    errores.push("El formato del email es inválido");
   }
 
-  // PASSWORD VACÍA
+  // Contraseña vacía
   if (adminPasswd === "") {
-    mostrarError("passwd_vacio_error", "El campo contraseña no puede estar vacío");
-    esValido = false;
-  } else {
-    ocultarError('passwd_vacio_error');
+    errores.push("El campo contraseña no puede estar vacío");
   }
 
-  // CREDENCIALES INCORRECTAS
+  // Credenciales incorrectas
   if (adminEmail !== ADMIN_EMAIL || adminPasswd !== ADMIN_PASS) {
-    mostrarError("login_error", "Las credenciales no son válidas");
-    esValido = false;
-  } else {
-    ocultarError('login_error');
+    errores.push("Las credenciales no son válidas");
   }
-
-  // SI TODO ESTÁ OK
-  return esValido;
-}
 
 
 // -------------------------------------------------
 //  MANEJO DE ERRORES
 // -------------------------------------------------
-
-// MUESTRA UN MENSAJE DE ERROR EN UN ELEMENTO
-function mostrarError(id, message) {
-  const el = document.getElementById(id);
-  el.textContent = "❌ " + message;
-  el.style.display = "block";
+if (errores.length >0) {
+  mostrarModalErrores(errores);
+  return false;
 }
 
-
-function ocultarError(Id) {
-  const errorElement = document.getElementById(Id);
-  errorElement.style.display = 'none';
+return true;
 }
 
 // -------------------------------------------------
@@ -74,6 +66,42 @@ function validarFormatoEmail(email) {
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
   return regex.test(email);
 }
+
+
+// ================================================================
+//  FUNCIÓN QUE MUESTRA EL MODAL DE ERRORES
+// ================================================================
+
+/*
+    El modal tiene un <ul> vacío.
+    Esta función recibe la lista de errores y la va agregando
+    como <li> uno por uno.
+*/
+
+function mostrarModalErrores(lista) {
+
+    const modal = document.getElementById("modalErrores");
+    const ul = document.getElementById("listaErrores");
+
+    // Limpio el UL por si quedó algo previo
+    ul.innerHTML = "";
+
+    // Inserto cada error como un <li>
+    lista.forEach(error => {
+        const li = document.createElement("li");
+        li.textContent = error;
+        ul.appendChild(li);
+    });
+
+    // Muestro el modal (flex lo centra)
+    modal.style.display = "flex";
+}
+
+
+// Botón para cerrar el modal
+document.getElementById("cerrarModal").addEventListener("click", () => {
+    document.getElementById("modalErrores").style.display = "none";
+});
 
 
 // -------------------------------------------------
@@ -90,4 +118,4 @@ btnIngresar.addEventListener('click', function(event) {
       // Al estar en pages/FormValidAdmin.html, la redirección debe ser relativa a la misma carpeta
       window.location.href = "PanelAdmin.html";
     }
-  });
+  })

@@ -32,31 +32,42 @@
         </div>
     </header>    
 
+
     <!--Sección Formulario Credenciales Administrador-->
 
     <main class="contenedor-form-admin">
         <section id="titulo_form" class="tit-contacto">
             <h3>Panel Administrador</h3>
         </section>
-        
-        <section id="errores_contenedor">
-            <div id="email_vacio_error" class="error"></div> <!--Campo email vacío-->
-            <div id="passwd_vacio_error" class="error"></div> <!--Campo contraseña vacío-->
-            <div id="login_error" class="error"></div> <!--Error en el email y la contraseña-->
-            <div id="email_format_error" class="error"></div> <!--Error en el formato del e-mail-->
-        </section>
-        <section>
-            <!--Formulario de ingreso de datos del Admin-->
+ 
+
+    <!--Formulario de ingreso de datos del Administrador-->
+
+        <section>            
             <div class="contenedor-form-contacto">
                 <form id="form_login" class="formulario" novalidate>
                     <input id="id_email" type="email" placeholder="Ingrese su email"> <br>
                     <input id="id_passwd" type="password" placeholder="Ingrese su contraseña"> <br>
                     <button type="submit" id="btn_login">Ingresar</button>
-                    <button type="reset">Borrarr</button>
+                    <button type="reset">Borrar</button>
                 </form>
             </div>
         </section>
     </main>
+
+
+    <!-- Modal compacto para mostrar la lista de errores -->
+    <!-- Se pone afuera del MAIN para que pueda soperponerse en la página -->
+
+    <div id="modalErrores" class="modal-oculto">
+        <div class="modal-contenido">
+            <h3>Se encontraron errores</h3>
+            <ul id="listaErrores"></ul>
+            <button type="submit" id="cerrarModal">Cerrar</button>
+        </div>
+    </div>
+
+
 
     <!--Footer-->
 
