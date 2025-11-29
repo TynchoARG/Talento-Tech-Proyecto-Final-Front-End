@@ -279,8 +279,14 @@ button[type="reset"]:hover {
 
 .contenedor-form-admin {
     background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
-    padding: 20px;
-    margin: 70px;
+    padding: 70px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor-form-contacto {
+    margin: 0 auto;
+    background-color: whitesmoke;
 }
 
 
