@@ -16,7 +16,7 @@
     align-items: center;
     background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
     padding: 10px 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .logo {
@@ -278,7 +278,7 @@ button[type="reset"]:hover {
 /* ------ Formulario Administardor ------ */
 
 .contenedor-form-admin {
-    background: linear-gradient(135deg, #F5FCE8 0%, #FFF5F8 100%);
+    background: linear-gradient(135deg, #c2c5bc 0%, #e7dbdf 100%);
     padding: 70px 0;
     width: 100%;
     text-align: center;
@@ -286,7 +286,6 @@ button[type="reset"]:hover {
 
 .contenedor-form-contacto {
     margin: 0 auto;
-    background-color: whitesmoke;
 }
 
 
