@@ -275,10 +275,10 @@ button[type="reset"]:hover {
 }
 
 
-/* ------ Formulario Administardor ------ */
+/* ------ Formulario Administrador ------ */
 
 .contenedor-form-admin {
-    background: linear-gradient(135deg, #92d310 0%, #e73e77 100%);
+    background: linear-gradient(0deg, #F5FCE8 0%, #F7E1E8 100%);
     padding: 70px 0;
     width: 100%;
     text-align: center;
