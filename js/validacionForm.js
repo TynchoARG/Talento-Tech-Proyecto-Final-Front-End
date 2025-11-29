@@ -78,24 +78,27 @@ function validarFormatoEmail(email) {
     como <li> uno por uno.
 */
 
-function mostrarModalErrores(lista) {
+function mostrarModalCompacto(errores) {
+  const overlay = document.getElementById("modal-compacto-overlay");
+  const lista = document.getElementById("modal-compacto-lista");
 
-    const modal = document.getElementById("modalErrores");
-    const ul = document.getElementById("listaErrores");
+  // Limpio el "lista" por si quedó algo previo
+  lista.innerHTML = "";
 
-    // Limpio el UL por si quedó algo previo
-    ul.innerHTML = "";
+  // Inserto cada error como un <li>
+  errores.forEach(err => {
+    const li = document.createElement("li");
+    li.textContent = err;
+    lista.appendChild(li);
+  });
 
-    // Inserto cada error como un <li>
-    lista.forEach(error => {
-        const li = document.createElement("li");
-        li.textContent = error;
-        ul.appendChild(li);
-    });
-
-    // Muestro el modal (flex lo centra)
-    modal.style.display = "flex";
+  // Muestro el modal (flex lo centra)
+  overlay.style.display = "flex";
 }
+
+document.getElementById("cerrar-modal").addEventListener("click", () => {
+  document.getElementById("modal-compacto-overlay").style.display = "none";
+});
 
 
 // Botón para cerrar el modal

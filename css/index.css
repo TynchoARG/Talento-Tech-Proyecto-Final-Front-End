@@ -286,37 +286,74 @@ button[type="reset"]:hover {
 
 /*---- Modal oculto para errores ---*/
 
-.modal-oculto {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    backdrop-filter: blur(2px);
-    justify-content: center;
-    align-items: center;
+/* Fondo oscuro del modal */
+#modal-compacto-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.modal-contenido {
-    background: white;
-    padding: 20px;
-    width: 260px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+/* Contenedor del modal */
+#modal-compacto {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 400px;        /* limite razonable */
+  width: 90%;              /* responsivo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: Inter, Verdana, Tahoma, sans-serif;
+  text-align: center;
 }
 
-.modal-contenido h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
+/* Título */
+#modal-compacto h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-#listaErrores {
-    padding-left: 18px;
-    margin: 12px 0;
+/* Lista de errores en columna */
+#modal-compacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
 }
 
-#listaErrores li {
-    margin-bottom: 6px;
+#modal-compacto ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.2rem;
 }
+
+/* Botón centrado */
+#modal-compacto-boton-cerrar {
+  display: flex;
+  justify-content: center;
+}
+
+#modal-compacto-boton-cerrar button {
+  background-color: #d48aa8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+#modal-compacto-boton-cerrar button:hover {
+  background-color: #c37294;
+}
+
 
 
 /* ------ Footer ------ */
