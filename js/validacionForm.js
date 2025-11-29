@@ -51,7 +51,7 @@ function validarFormulario() {
 //  MANEJO DE ERRORES
 // -------------------------------------------------
 if (errores.length >0) {
-  mostrarModalErrores(errores);
+  mostrarModalCompacto(errores);
   return false;
 }
 
@@ -96,14 +96,9 @@ function mostrarModalCompacto(errores) {
   overlay.style.display = "flex";
 }
 
+// Botón para cerrar el modal
 document.getElementById("cerrar-modal").addEventListener("click", () => {
   document.getElementById("modal-compacto-overlay").style.display = "none";
-});
-
-
-// Botón para cerrar el modal
-document.getElementById("cerrarModal").addEventListener("click", () => {
-    document.getElementById("modalErrores").style.display = "none";
 });
 
 
