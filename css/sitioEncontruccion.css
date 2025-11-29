@@ -14,6 +14,8 @@
 /* ------ Header ------ */
 
 .header {
+    position: relative;
+    z-index: 1000;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -89,7 +91,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Los blobs detrás del texto */
+    z-index: -1; /* Los blobs detrás del texto */
 }
 
 .blob {
@@ -169,6 +171,8 @@ body, html {
 /* ------ Footer ------ */
 
 .contenedor-footer {
+    position: relative;
+    z-index: 1000;
     background: #333;
     color: white;
     display: flex;
