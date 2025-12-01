@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "titulo": "Ciempiés Antiestrés",
+    "img": "../media/images/ciempies-antiestres.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 2,
+    "titulo": "Ardilla Apretable",
+    "img": "../media/images/ardilla-squishy.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 3,
+    "titulo": "Corazón Pop-It",
+    "img": "../media/images/corazon-popit.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 4,
+    "titulo": "Cuerda Siliconada",
+    "img": "../media/images/cuerda-siliconada-estirable.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 5,
+    "titulo": "Finger Spinner",
+    "img": "../media/images/finger-spinner.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 6,
+    "titulo": "Flower Spinner",
+    "img": "../media/images/flower-spinner.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 7,
+    "titulo": "Oruga Articulada",
+    "img": "../media/images/oruga-articulada-antiestres.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 8,
+    "titulo": "Patito Relleno",
+    "img": "../media/images/patito-relleno-arena.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 9,
+    "titulo": "Pollito Apretable",
+    "img": "../media/images/pollito-apretable.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 10,
+    "titulo": "Tortuga Apretable",
+    "img": "../media/images/tortuga-squishy.jpg",
+    "precio": 1000
+  },
+  {
+    "id": 11,
+    "titulo": "Wacky tracky",
+    "img": "../media/images/wacky-tracky.jpg",
+    "precio": 1000
+  }
+]
