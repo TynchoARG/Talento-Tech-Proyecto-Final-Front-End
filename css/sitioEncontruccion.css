@@ -1,5 +1,5 @@
 /* ==================================== */
-/* 1. Reset y Estilos Generales         */
+/* 0. Reset y Estilos Generales         */
 /* ==================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -11,7 +11,10 @@
 }
 
 
-/* ------ Header ------ */
+/* ==================================== */
+/* 1.      Estilos del Header           */
+/* ==================================== */
+
 
 .header {
     position: relative;
@@ -82,8 +85,9 @@ body, html {
     flex-direction: column;
 }
 
+
 /* ==================================== */
-/* 2. Estilos del Fondo (Blobs)         */
+/* 2.    Estilos del Fondo (Blobs)      */
 /* ==================================== */
 .blob-container {
     position: absolute; /* Posiciona respecto a .main-content */
@@ -91,7 +95,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Los blobs detrás del texto */
+    z-index: 0; /* Los blobs detrás del texto */
 }
 
 .blob {
@@ -127,12 +131,14 @@ body, html {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 30%;
 }
 
+
 /* ==================================== */
 /* 3. Estilos del Sitio en Construcción */
 /* ==================================== */
 .construction-wrapper {
     /* Centra el texto en el medio del MAIN */
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -141,6 +147,7 @@ body, html {
 }
 
 .content-box {
+    position: relative;
     width: 90%;
     max-width: 800px;
     padding: 30px 20px;
@@ -150,12 +157,22 @@ body, html {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     backdrop-filter: blur(5px); /* Opcional: efecto de vidrio esmerilado */
     border-radius: 5px; /* Bordes suaves */
+    z-index: 2;
 }
 
 .content-box h1 {
     margin: 0;
-    font-size: 2.5em; 
+    font-size: clamp(16px, 8vw, 32px); 
     font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.content-box h2 {
+    margin: 0;
+    font-size: clamp(16px, 8vw, 32px); 
+    font-weight: 500;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -168,7 +185,10 @@ body, html {
     color: #555;
 }
 
-/* ------ Footer ------ */
+
+/* ==================================== */
+/* 4.      Estilos del Footer           */
+/* ==================================== */
 
 .contenedor-footer {
     position: relative;
@@ -275,7 +295,9 @@ body, html {
   color: #ccc;
 }
 
-/* ------ Parte responsive ------ */ 
+/* ==================================== */
+/* 5.     Estilos del Responsive        */
+/* ==================================== */
 
 @media (max-width: 800px) {
 
