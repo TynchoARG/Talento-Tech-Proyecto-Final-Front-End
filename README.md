@@ -44,10 +44,14 @@ El sitio está siendo preparado para funcionar correctamente en:
 
 ⸻
 
-👨‍💻 Autor
+**👨‍💻 Autor**
 
 Martín Zabala
 Proyecto Final – Curso de Frontend en Talento Tech.
 Argentina, 2025
 
+-----
 
+**🔒 Datos Administrador:**
+  * correo: admin@correo.com
+  * contraseña: admin1234
